@@ -1,0 +1,39 @@
+
+//生成n个随机数，用户指定
+#include "iostream"
+#include "ctime"
+#include "cstdlib"
+#include <stdlib.h>
+#include <ctime>
+using namespace std;
+
+const int N=10;
+void InitArray(int b[],int n){
+    int i;
+    srand(time(0));//rand前先用srand设置随机种子,srand只需调用一次
+    for(i=0;i<n;i++)
+    {
+        b[i] = rand();//rand需放在循环中
+    }
+}
+int main(int argc, char* argv[])
+{
+int ccc;
+cout<<"输入生成随机数的个数n"<<endl;
+cin>>ccc;
+int a[ccc];	
+	srand(time(0));//rand前先用srand设置随机种子,srand只需调用一次
+    for(int i=0;i<ccc;i++)
+    {
+        a[i] = rand();//rand需放在循环中
+    }
+
+    for(int i=0;i<ccc;i++)
+    {
+        cout << "a[" << i << "] = " << a[i] << endl;
+    }
+  
+system("pause");
+	return 0;
+
+}

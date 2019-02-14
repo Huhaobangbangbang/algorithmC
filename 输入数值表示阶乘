@@ -1,0 +1,35 @@
+//生成阶乘
+#include<iostream>
+
+using namespace std;
+
+
+int fac(int);
+
+  int main(){	
+  int ret=1;
+  	cout<<"请输入一个整数";
+  	cin>>ret;
+  
+  if(ret<0)
+cout<<"fuck you"<<endl;
+else
+
+ 
+	for(int i=1;i<=ret;i++)
+	{
+        cout<<i<<"!= "<<fac(i)<<endl;
+	}
+
+  	
+  	cout<<"阶乘"<<fac(ret)<<endl;
+  	return 0;
+  }
+int fac(int x)
+{
+	static int ret=1;   //静态局部变量
+ 
+	ret*=x;
+ 
+	return ret;
+}

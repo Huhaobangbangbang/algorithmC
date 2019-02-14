@@ -1,0 +1,49 @@
+#include "stdafx.h"
+#include "stdafx.h"
+#include "iostream"
+#include "ctime"
+#include "cstdlib"
+#include <stdlib.h>
+#include <time.h> 
+using namespace std;
+#define random(x)(rand()%x)
+//猜一个999之内的数,一共猜10次
+
+
+
+int main(int argc, char* argv[])
+{
+	int a;
+	int b;
+	int count=0;
+	string str;
+    srand((unsigned)time(0)); 
+    for(int i = 1; i <1000;i++ ){
+       b=random(999);
+	  
+	}
+
+cout<<"input a number between 0 and 999 "<<endl;
+do{
+cin>>a;
+
+//check out if the number is right
+if(a==b){
+cout<<" right answer "<<endl;
+return 0;
+    
+}else if(a<b){
+cout<<"the input value is too small"<<endl;
+}
+else if(a>b){
+cout<<"the input value is too large"<<endl;
+}
+
+count=count+1;
+
+}while(count<=10);
+
+system("pause");
+	return 0;
+
+}
